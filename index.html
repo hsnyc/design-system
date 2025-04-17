@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="layouts/main-layout.css">
+    
     <!-- Link component CSS files as needed -->
     <link rel="stylesheet" href="components/button/button.css">
     <link rel="stylesheet" href="components/card/card.css">
@@ -14,10 +15,23 @@
     <link rel="stylesheet" href="components/alert/alert.css">
     <link rel="stylesheet" href="components/badge/badge.css">
     <link rel="stylesheet" href="styles/code-viewer.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/alerts.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/inputs.css">            
+    <link id="theme-stylesheet" rel="stylesheet" href="styles/light-theme.css">
 </head>
 <body>
     <header class="main-header">
         <h1>My Design System</h1>
+        <button id="theme-toggle" class="theme-toggle">Switch to Dark Theme</button>
     </header>
 
     <div class="main-container">
@@ -106,6 +120,7 @@
                       <!-- Content from components/card/card.md could go here -->
                  </div>
             </section>
+
 
             <section id="input">
                 <h2>Input Component</h2>
@@ -213,6 +228,19 @@
                 codeBlock.style.display = 'none';
             }
         }
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeStylesheet = document.getElementById('theme-stylesheet');
+
+        themeToggle.addEventListener('click', () => {
+            if (themeStylesheet.getAttribute('href') === 'styles/light-theme.css') {
+                themeStylesheet.setAttribute('href', 'styles/dark-theme.css');
+                themeToggle.textContent = 'Switch to Light Theme';
+            } else {
+                themeStylesheet.setAttribute('href', 'styles/light-theme.css');
+                themeToggle.textContent = 'Switch to Dark Theme';
+            }
+        });
     </script>
 </body>
 </html>

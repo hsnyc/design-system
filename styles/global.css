@@ -1,72 +1,163 @@
-/* Basic Reset & Body Styles */
+/* Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  color: var(--color-text);
-  background-color: var(--color-background);
+  color: var(--color-base-content);
+  background-color: var(--color-base-100);
+  min-height: 100vh;
 }
 
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: calc(var(--spacing-unit) * 0.5);
+  margin-bottom: var(--spacing-4);
+  line-height: var(--line-height-heading);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: var(--spacing-unit);
+  margin-bottom: var(--spacing-4);
 }
 
 a {
   color: var(--color-primary);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--color-primary-dark);
 }
 
-/* Utility Classes (Optional) */
+/* Layout */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: var(--spacing-4);
 }
 
-/* Style for component examples */
+/* Components */
 .component-example {
-    border: 1px solid var(--color-border);
-    padding: calc(var(--spacing-unit) * 1.5);
-    margin-bottom: var(--spacing-unit);
-    border-radius: var(--border-radius);
-}
-
-.component-example h3 {
-    margin-bottom: var(--spacing-unit);
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
 }
 
 .component-docs {
-    background-color: #f8f9fa; /* Light background for docs */
-    padding: calc(var(--spacing-unit) * 1.5);
-    margin-bottom: calc(var(--spacing-unit) * 2);
-    border-radius: var(--border-radius);
+  background-color: var(--card-bg);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
 }
 
-/* Color Swatches */
-.color-swatch {
-    display: inline-block;
-    width: 100px;
-    height: 50px;
-    margin-right: var(--spacing-unit);
-    margin-bottom: var(--spacing-unit);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
+.component-docs pre {
+  background-color: var(--color-base-300);
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  margin: var(--spacing-4) 0;
+}
+
+.theme-toggle {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--primary-color);
     color: white;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9em;
+}
+
+/* Responsive Utilities */
+@media (min-width: 768px) {
+  .md\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .md\:col-span-9 {
+    grid-column: span 9 / span 9;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .lg\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: var(--color-dark-primary);
+    --color-base-100: var(--color-dark-base-100);
+    --color-base-200: var(--color-dark-base-200);
+    --color-base-300: var(--color-dark-base-300);
+    --color-base-content: var(--color-dark-base-content);
+  }
 }

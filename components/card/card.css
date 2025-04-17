@@ -1,42 +1,105 @@
+/* Card Component */
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: var(--color-background);
-    background-clip: border-box;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    margin-bottom: var(--spacing-unit); /* Add spacing between cards */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-base-100);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .card-body {
-    flex: 1 1 auto;
-    padding: calc(var(--spacing-unit) * 1.25);
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding: var(--spacing-6);
 }
 
 .card-title {
-    margin-bottom: calc(var(--spacing-unit) * 0.75);
-}
-
-.card-img-top {
-    width: 100%;
-    border-top-left-radius: calc(var(--border-radius) - 1px);
-    border-top-right-radius: calc(var(--border-radius) - 1px);
-    vertical-align: middle; /* Fix potential space below image */
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin: 0;
 }
 
 .card-actions {
-    padding-top: calc(var(--spacing-unit) * 0.75);
-    /* Add specific styling for action alignment if needed, e.g., text-align: right */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  margin-top: auto;
 }
 
-/* Ensure buttons inside actions have appropriate margin */
-.card-actions .btn {
-    margin-right: calc(var(--spacing-unit) * 0.5);
+/* Card Variations */
+.card-bordered {
+  border: 1px solid var(--color-base-300);
 }
 
-.card-actions .btn:last-child {
-    margin-right: 0;
+.card-compact .card-body {
+  padding: var(--spacing-4);
+  gap: var(--spacing-2);
+}
+
+.card-normal .card-body {
+  padding: var(--spacing-6);
+  gap: var(--spacing-3);
+}
+
+/* Card Image Positions */
+.card.image-full {
+  display: grid;
+}
+
+.card.image-full:before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.card.image-full figure {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  height: 100%;
+}
+
+.card.image-full .card-body {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* Card Grid Layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: var(--spacing-4);
+  }
+  
+  .card-title {
+    font-size: var(--font-size-lg);
+  }
 }

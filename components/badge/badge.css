@@ -1,44 +1,82 @@
-/* Badge Component Styles */
+/* Badge Component */
 .badge {
-    display: inline-block;
-    padding: 0.25em 0.4em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-base-content);
+  background-color: var(--color-base-300);
+  border-radius: var(--border-radius);
+  gap: var(--spacing-1);
 }
 
+/* Badge Variants */
 .badge-primary {
-    color: #fff;
-    background-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .badge-secondary {
-    color: #fff;
-    background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: white;
 }
 
-.badge-success {
-    color: #fff;
-    background-color: #28a745;
+.badge-accent {
+  background-color: var(--color-accent);
+  color: white;
 }
 
-.badge-danger {
-    color: #fff;
-    background-color: #dc3545;
+.badge-neutral {
+  background-color: var(--color-neutral);
+  color: white;
 }
 
-.badge-light {
-    color: #212529;
-    background-color: #f8f9fa;
+/* Badge Outline Variants */
+.badge-outline {
+  background-color: transparent;
+  border: 1px solid currentColor;
 }
 
-/* Badge inside button styles */
+.badge-outline.badge-primary {
+  color: var(--color-primary);
+}
+
+.badge-outline.badge-secondary {
+  color: var(--color-secondary);
+}
+
+.badge-outline.badge-accent {
+  color: var(--color-accent);
+}
+
+/* Badge Sizes */
+.badge-sm {
+  padding: calc(var(--spacing-1) * 0.5) var(--spacing-1);
+  font-size: 0.625rem;
+}
+
+.badge-lg {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: 0.875rem;
+}
+
+/* Badge with icons */
+.badge svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* Badge positioning in buttons */
 .btn .badge {
-    position: relative;
-    top: -1px;
-    margin-left: 0.5rem;
+  position: relative;
+  top: -1px;
+}
+
+/* Badge groups */
+.badge-group {
+  display: inline-flex;
+  gap: var(--spacing-1);
 }
