@@ -10,6 +10,10 @@
     <!-- Link component CSS files as needed -->
     <link rel="stylesheet" href="components/button/button.css">
     <link rel="stylesheet" href="components/card/card.css">
+    <link rel="stylesheet" href="components/input/input.css">
+    <link rel="stylesheet" href="components/alert/alert.css">
+    <link rel="stylesheet" href="components/badge/badge.css">
+    <link rel="stylesheet" href="styles/code-viewer.css">
 </head>
 <body>
     <header class="main-header">
@@ -29,6 +33,9 @@
                 <ul>
                     <li><a href="#button">Button</a></li>
                     <li><a href="#card">Card</a></li>
+                    <li><a href="#input">Input</a></li>
+                    <li><a href="#alert">Alert</a></li>
+                    <li><a href="#badge">Badge</a></li>
                     <!-- Add links to component docs -->
                 </ul>
             </nav>
@@ -100,8 +107,95 @@
                  </div>
             </section>
 
-            <!-- Add more sections for other components -->
+            <section id="input">
+                <h2>Input Component</h2>
+                <p>Input fields allow users to enter and edit text.</p>
+                <div class="component-example">
+                    <h3>Example</h3>
+                    <div class="input-group">
+                        <label for="text-input">Text Input</label>
+                        <input type="text" id="text-input" class="input" placeholder="Enter text...">
+                    </div>
+                    <div class="input-group">
+                        <label for="password-input">Password Input</label>
+                        <input type="password" id="password-input" class="input" placeholder="Enter password...">
+                    </div>
+                    <div class="input-group">
+                        <label for="disabled-input">Disabled Input</label>
+                        <input type="text" id="disabled-input" class="input" placeholder="Disabled" disabled>
+                    </div>
+                </div>
+                <div class="component-docs">
+                    <h3>Documentation</h3>
+                    <p>The Input component is used for collecting user data. Use appropriate input types for different data needs.</p>
+                    <button class="code-toggle" onclick="toggleCode('input-code')">View Code</button>
+                    <pre class="code-block" id="input-code" style="display: none;">
+&lt;div class="input-group"&gt;
+    &lt;label for="text-input"&gt;Text Input&lt;/label&gt;
+    &lt;input type="text" id="text-input" class="input" placeholder="Enter text..."&gt;
+&lt;/div&gt;
+                    </pre>
+                </div>
+            </section>
+            
+            <section id="alert">
+                <h2>Alert Component</h2>
+                <p>Alerts provide contextual feedback messages for user actions.</p>
+                <div class="component-example">
+                    <h3>Example</h3>
+                    <div class="alert alert-success">
+                        <strong>Success!</strong> Your operation was completed successfully.
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Info!</strong> This is an informational message.
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Warning!</strong> This action might have consequences.
+                    </div>
+                    <div class="alert alert-danger">
+                        <strong>Danger!</strong> An error has occurred.
+                    </div>
+                </div>
+                <div class="component-docs">
+                    <h3>Documentation</h3>
+                    <p>Alerts should be used to provide feedback to users about their actions or system status.</p>
+                    <button class="code-toggle" onclick="toggleCode('alert-code')">View Code</button>
+                    <pre class="code-block" id="alert-code" style="display: none;">
+&lt;div class="alert alert-success"&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; Your operation was completed successfully.
+&lt;/div&gt;
+                    </pre>
+                </div>
+            </section>
+            
+            <section id="badge">
+                <h2>Badge Component</h2>
+                <p>Badges are used to highlight status, counts, or labels.</p>
+                <div class="component-example">
+                    <h3>Example</h3>
+                    <span class="badge badge-primary">New</span>
+                    <span class="badge badge-secondary">Updated</span>
+                    <span class="badge badge-success">Approved</span>
+                    <span class="badge badge-danger">Rejected</span>
+                    <div style="margin-top: 20px;">
+                        <button class="btn btn-primary">
+                            Notifications <span class="badge badge-light">4</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="component-docs">
+                    <h3>Documentation</h3>
+                    <p>Badges can be used to display counts, status indicators, or other small pieces of information.</p>
+                    <button class="code-toggle" onclick="toggleCode('badge-code')">View Code</button>
+                    <pre class="code-block" id="badge-code" style="display: none;">
+&lt;span class="badge badge-primary"&gt;New&lt;/span&gt;
 
+&lt;button class="btn btn-primary"&gt;
+    Notifications &lt;span class="badge badge-light"&gt;4&lt;/span&gt;
+&lt;/button&gt;
+                    </pre>
+                </div>
+            </section>
         </main>
     </div>
 
@@ -109,7 +203,16 @@
         <p>&copy; 2025 Your Name/Company</p>
     </footer>
 
-    <!-- Optional: Link utility JS -->
-    <!-- <script src="utils/helpers.js"></script> -->
+    <!-- JavaScript for Code Viewer -->
+    <script>
+        function toggleCode(codeBlockId) {
+            const codeBlock = document.getElementById(codeBlockId);
+            if (codeBlock.style.display === 'none') {
+                codeBlock.style.display = 'block';
+            } else {
+                codeBlock.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
