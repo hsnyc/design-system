@@ -1,0 +1,75 @@
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: var(--color-text);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: #e9ecef; /* Default background */
+    border: 1px solid #ced4da; /* Default border */
+    padding: 0.375rem 0.75rem;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    border-radius: var(--border-radius);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0.25rem; /* Add some margin for spacing */
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Example focus */
+}
+
+/* Primary Button */
+.btn-primary {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker primary */
+    border-color: #0056b3;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    color: #fff;
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.btn-secondary:hover {
+    background-color: #545b62; /* Darker secondary */
+    border-color: #545b62;
+}
+
+/* Accent Button */
+.btn-accent {
+    color: #fff;
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-accent:hover {
+    background-color: #117a8b; /* Darker accent */
+    border-color: #117a8b;
+}
+
+/* Outline Button */
+.btn-outline {
+    color: var(--color-primary);
+    background-color: transparent;
+    border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}

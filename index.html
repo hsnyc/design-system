@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Design System</title>
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="layouts/main-layout.css">
+    <!-- Link component CSS files as needed -->
+    <link rel="stylesheet" href="components/button/button.css">
+    <link rel="stylesheet" href="components/card/card.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>My Design System</h1>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav>
+                <h2>Guidelines</h2>
+                <ul>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                    <!-- Add links to guideline docs -->
+                </ul>
+                <h2>Components</h2>
+                <ul>
+                    <li><a href="#button">Button</a></li>
+                    <li><a href="#card">Card</a></li>
+                    <!-- Add links to component docs -->
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <p>Welcome to the design system. Use the navigation to explore guidelines and components.</p>
+                <!-- Content from docs/getting-started.md could go here -->
+            </section>
+
+            <section id="colors">
+                <h2>Colors</h2>
+                <p>Color definitions...</p>
+                <!-- Content from docs/colors.md could go here -->
+                 <div class="color-swatch" style="background-color: var(--color-primary);">Primary</div>
+                 <div class="color-swatch" style="background-color: var(--color-secondary);">Secondary</div>
+                 <div class="color-swatch" style="background-color: var(--color-accent);">Accent</div>
+            </section>
+
+             <section id="typography">
+                <h2>Typography</h2>
+                <p>Font definitions...</p>
+                <!-- Content from docs/typography.md could go here -->
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <p>Paragraph text using the default font.</p>
+            </section>
+
+            <section id="button">
+                <h2>Button Component</h2>
+                <p>Buttons allow users to take actions.</p>
+                <!-- Include button example -->
+                <div class="component-example">
+                    <h3>Example</h3>
+                    <!-- Content from components/button/button.html -->
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                </div>
+                <div class="component-docs">
+                     <h3>Documentation</h3>
+                     <p>...</p>
+                     <!-- Content from components/button/button.md could go here -->
+                </div>
+            </section>
+
+            <section id="card">
+                 <h2>Card Component</h2>
+                 <p>Cards group related content.</p>
+                 <!-- Include card example -->
+                 <div class="component-example">
+                     <h3>Example</h3>
+                     <!-- Content from components/card/card.html -->
+                     <div class="card">
+                         <div class="card-body">
+                             <h3 class="card-title">Card Title</h3>
+                             <p>This is the card content.</p>
+                             <div class="card-actions">
+                                 <button class="btn btn-primary">Action</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="component-docs">
+                      <h3>Documentation</h3>
+                      <p>...</p>
+                      <!-- Content from components/card/card.md could go here -->
+                 </div>
+            </section>
+
+            <!-- Add more sections for other components -->
+
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Your Name/Company</p>
+    </footer>
+
+    <!-- Optional: Link utility JS -->
+    <!-- <script src="utils/helpers.js"></script> -->
+</body>
+</html>
