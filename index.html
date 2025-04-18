@@ -3,244 +3,528 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Design System</title>
+    <title>Design System</title>
+    
+    <!-- Core Styles -->
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="layouts/main-layout.css">
     
-    <!-- Link component CSS files as needed -->
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="components/navigation/navigation.css">
     <link rel="stylesheet" href="components/button/button.css">
     <link rel="stylesheet" href="components/card/card.css">
     <link rel="stylesheet" href="components/input/input.css">
     <link rel="stylesheet" href="components/alert/alert.css">
     <link rel="stylesheet" href="components/badge/badge.css">
-    <link rel="stylesheet" href="styles/code-viewer.css">
-    <link rel="stylesheet" href="styles/theme.css">
-    <link rel="stylesheet" href="styles/typography.css">
-    <link rel="stylesheet" href="styles/colors.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/sidebar.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/alerts.css">
-    <link rel="stylesheet" href="styles/buttons.css">
-    <link rel="stylesheet" href="styles/cards.css">
-    <link rel="stylesheet" href="styles/inputs.css">            
+    <link rel="stylesheet" href="styles/components.css">
+    
+    <!-- Theme -->
     <link id="theme-stylesheet" rel="stylesheet" href="styles/light-theme.css">
+    
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
 </head>
 <body>
-    <header class="main-header">
-        <h1>My Design System</h1>
-        <button id="theme-toggle" class="theme-toggle">Switch to Dark Theme</button>
-    </header>
-
-    <div class="main-container">
-        <aside class="sidebar">
-            <nav>
-                <h2>Guidelines</h2>
-                <ul>
+    <div class="main-wrapper">
+        <!-- Navigation Component -->
+        <nav class="navbar">
+            <div class="navbar-start">
+                <button class="mobile-menu-button" aria-label="Open menu" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </button>
+                <a href="#" class="navbar-brand">Design System</a>
+            </div>
+            
+            <div class="navbar-center">
+                <ul class="navbar-menu">
                     <li><a href="#colors">Colors</a></li>
                     <li><a href="#typography">Typography</a></li>
-                    <!-- Add links to guideline docs -->
+                    <li><a href="#button">Buttons</a></li>
+                    <li class="dropdown">
+                        <a href="#components">Components</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li><a href="#card">Cards</a></li>
+                                <li><a href="#input">Inputs</a></li>
+                                <li><a href="#alert">Alerts</a></li>
+                                <li><a href="#badge">Badges</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
-                <h2>Components</h2>
-                <ul>
-                    <li><a href="#button">Button</a></li>
-                    <li><a href="#card">Card</a></li>
-                    <li><a href="#input">Input</a></li>
-                    <li><a href="#alert">Alert</a></li>
-                    <li><a href="#badge">Badge</a></li>
-                    <!-- Add links to component docs -->
-                </ul>
-            </nav>
-        </aside>
-
-        <main class="content">
-            <section id="getting-started">
-                <h2>Getting Started</h2>
-                <p>Welcome to the design system. Use the navigation to explore guidelines and components.</p>
-                <!-- Content from docs/getting-started.md could go here -->
-            </section>
-
-            <section id="colors">
-                <h2>Colors</h2>
-                <p>Color definitions...</p>
-                <!-- Content from docs/colors.md could go here -->
-                 <div class="color-swatch" style="background-color: var(--color-primary);">Primary</div>
-                 <div class="color-swatch" style="background-color: var(--color-secondary);">Secondary</div>
-                 <div class="color-swatch" style="background-color: var(--color-accent);">Accent</div>
-            </section>
-
-             <section id="typography">
-                <h2>Typography</h2>
-                <p>Font definitions...</p>
-                <!-- Content from docs/typography.md could go here -->
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <p>Paragraph text using the default font.</p>
-            </section>
-
-            <section id="button">
-                <h2>Button Component</h2>
-                <p>Buttons allow users to take actions.</p>
-                <!-- Include button example -->
-                <div class="component-example">
-                    <h3>Example</h3>
-                    <!-- Content from components/button/button.html -->
-                    <button class="btn btn-primary">Primary Button</button>
-                    <button class="btn btn-secondary">Secondary Button</button>
-                </div>
-                <div class="component-docs">
-                     <h3>Documentation</h3>
-                     <p>...</p>
-                     <!-- Content from components/button/button.md could go here -->
-                </div>
-            </section>
-
-            <section id="card">
-                 <h2>Card Component</h2>
-                 <p>Cards group related content.</p>
-                 <!-- Include card example -->
-                 <div class="component-example">
-                     <h3>Example</h3>
-                     <!-- Content from components/card/card.html -->
-                     <div class="card">
-                         <div class="card-body">
-                             <h3 class="card-title">Card Title</h3>
-                             <p>This is the card content.</p>
-                             <div class="card-actions">
-                                 <button class="btn btn-primary">Action</button>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="component-docs">
-                      <h3>Documentation</h3>
-                      <p>...</p>
-                      <!-- Content from components/card/card.md could go here -->
-                 </div>
-            </section>
-
-
-            <section id="input">
-                <h2>Input Component</h2>
-                <p>Input fields allow users to enter and edit text.</p>
-                <div class="component-example">
-                    <h3>Example</h3>
-                    <div class="input-group">
-                        <label for="text-input">Text Input</label>
-                        <input type="text" id="text-input" class="input" placeholder="Enter text...">
-                    </div>
-                    <div class="input-group">
-                        <label for="password-input">Password Input</label>
-                        <input type="password" id="password-input" class="input" placeholder="Enter password...">
-                    </div>
-                    <div class="input-group">
-                        <label for="disabled-input">Disabled Input</label>
-                        <input type="text" id="disabled-input" class="input" placeholder="Disabled" disabled>
-                    </div>
-                </div>
-                <div class="component-docs">
-                    <h3>Documentation</h3>
-                    <p>The Input component is used for collecting user data. Use appropriate input types for different data needs.</p>
-                    <button class="code-toggle" onclick="toggleCode('input-code')">View Code</button>
-                    <pre class="code-block" id="input-code" style="display: none;">
-&lt;div class="input-group"&gt;
-    &lt;label for="text-input"&gt;Text Input&lt;/label&gt;
-    &lt;input type="text" id="text-input" class="input" placeholder="Enter text..."&gt;
-&lt;/div&gt;
-                    </pre>
-                </div>
-            </section>
+            </div>
             
-            <section id="alert">
-                <h2>Alert Component</h2>
-                <p>Alerts provide contextual feedback messages for user actions.</p>
-                <div class="component-example">
-                    <h3>Example</h3>
-                    <div class="alert alert-success">
-                        <strong>Success!</strong> Your operation was completed successfully.
-                    </div>
+            <div class="navbar-end">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <!-- Sun icon (for dark mode) -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    
+                    <!-- Moon icon (for light mode) -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#button">Buttons</a></li>
+                <li><a href="#card">Cards</a></li>
+                <li><a href="#input">Inputs</a></li>
+                <li><a href="#alert">Alerts</a></li>
+                <li><a href="#badge">Badges</a></li>
+            </ul>
+        </div>
+
+        <div class="main-container">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <nav>
+                    <h2>Guidelines</h2>
+                    <ul>
+                        <li><a href="#colors">Colors</a></li>
+                        <li><a href="#typography">Typography</a></li>
+                        <li><a href="#spacing">Spacing</a></li>
+                    </ul>
+                    
+                    <h2>Components</h2>
+                    <ul>
+                        <li><a href="#button">Button</a></li>
+                        <li><a href="#card">Card</a></li>
+                        <li><a href="#input">Input</a></li>
+                        <li><a href="#alert">Alert</a></li>
+                        <li><a href="#badge">Badge</a></li>
+                        <li><a href="#navigation">Navigation</a></li>
+                    </ul>
+                    
+                    <h2>Layout</h2>
+                    <ul>
+                        <li><a href="#grids">Grid System</a></li>
+                        <li><a href="#containers">Containers</a></li>
+                    </ul>
+                    
+                    <h2>Documentation</h2>
+                    <ul>
+                        <li><a href="docs/theming.md" target="_blank">Theming Guide</a></li>
+                        <li><a href="docs/extending.md" target="_blank">Extending Guide</a></li>
+                        <li><a href="README.md" target="_blank">README</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="content">
+                <section id="introduction">
+                    <h1>Design System</h1>
+                    <p>A framework-agnostic design system for building consistent user interfaces. This design system provides reusable components and design guidelines that can be used in any project regardless of the framework.</p>
+                    
                     <div class="alert alert-info">
-                        <strong>Info!</strong> This is an informational message.
+                        <strong>Note:</strong> Browse components and guidelines using the navigation menu.
                     </div>
-                    <div class="alert alert-warning">
-                        <strong>Warning!</strong> This action might have consequences.
+                </section>
+                
+                <section id="getting-started">
+                    <h2>Getting Started</h2>
+                    <p>This design system is built with plain HTML, CSS, and JavaScript, making it compatible with any web project. No build steps or frameworks required.</p>
+                    
+                    <div class="component-docs">
+                        <h3>Installation</h3>
+                        <p>To use this design system in your project:</p>
+                        <ol>
+                            <li>Download the design system files</li>
+                            <li>Include the necessary CSS and JavaScript files</li>
+                            <li>Copy the HTML markup for the components you need</li>
+                        </ol>
+                        
+                        <button class="code-toggle" data-target="installation-code">View Code</button>
+                        <pre class="code-block" id="installation-code" style="display: none;">
+&lt;!-- Include the core styles --&gt;
+&lt;link rel="stylesheet" href="styles/variables.css"&gt;
+&lt;link rel="stylesheet" href="styles/global.css"&gt;
+
+&lt;!-- Include component styles as needed --&gt;
+&lt;link rel="stylesheet" href="components/button/button.css"&gt;
+&lt;link rel="stylesheet" href="components/card/card.css"&gt;
+
+&lt;!-- Include theme --&gt;
+&lt;link id="theme-stylesheet" rel="stylesheet" href="styles/light-theme.css"&gt;
+
+&lt;!-- Include scripts --&gt;
+&lt;script src="scripts/main.js"&gt;&lt;/script&gt;
+                        </pre>
                     </div>
-                    <div class="alert alert-danger">
-                        <strong>Danger!</strong> An error has occurred.
+                </section>
+                
+                <section id="colors">
+                    <h2>Colors</h2>
+                    <p>The color system is built using CSS variables, making it easy to customize and extend.</p>
+                    
+                    <div class="component-example">
+                        <h3>Color Palette</h3>
+                        <div class="color-grid">
+                            <div class="color-swatch" style="background-color: var(--color-primary);">
+                                <div class="color-name">Primary</div>
+                                <div class="color-value">var(--color-primary)</div>
+                            </div>
+                            <div class="color-swatch" style="background-color: var(--color-secondary);">
+                                <div class="color-name">Secondary</div>
+                                <div class="color-value">var(--color-secondary)</div>
+                            </div>
+                            <div class="color-swatch" style="background-color: var(--color-accent);">
+                                <div class="color-name">Accent</div>
+                                <div class="color-value">var(--color-accent)</div>
+                            </div>
+                            <div class="color-swatch" style="background-color: var(--color-neutral);">
+                                <div class="color-name">Neutral</div>
+                                <div class="color-value">var(--color-neutral)</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="component-docs">
-                    <h3>Documentation</h3>
-                    <p>Alerts should be used to provide feedback to users about their actions or system status.</p>
-                    <button class="code-toggle" onclick="toggleCode('alert-code')">View Code</button>
-                    <pre class="code-block" id="alert-code" style="display: none;">
-&lt;div class="alert alert-success"&gt;
-    &lt;strong&gt;Success!&lt;/strong&gt; Your operation was completed successfully.
+                    
+                    <div class="component-docs">
+                        <h3>Usage</h3>
+                        <p>Use CSS variables to apply colors consistently throughout your application:</p>
+                        
+                        <button class="code-toggle" data-target="colors-code">View Code</button>
+                        <pre class="code-block" id="colors-code" style="display: none;">
+.my-element {
+  background-color: var(--color-primary);
+  color: var(--color-base-100);
+}
+
+.my-accent-element {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent-dark);
+}
+                        </pre>
+                    </div>
+                </section>
+                
+                <section id="typography">
+                    <h2>Typography</h2>
+                    <p>The typography system uses a consistent scale and is built with accessibility in mind.</p>
+                    
+                    <div class="component-example">
+                        <h3>Type Scale</h3>
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <p>This is a paragraph of text. The typography system is designed to provide good readability and hierarchy. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p><strong>Bold text</strong> and <em>italic text</em> are also supported.</p>
+                    </div>
+                    
+                    <div class="component-docs">
+                        <h3>Usage</h3>
+                        <p>Typography is controlled through CSS variables:</p>
+                        
+                        <button class="code-toggle" data-target="typography-code">View Code</button>
+                        <pre class="code-block" id="typography-code" style="display: none;">
+:root {
+  --font-family-base: 'SourceCodePro', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --line-height-base: 1.5;
+  --line-height-heading: 1.2;
+}
+                        </pre>
+                    </div>
+                </section>
+
+                <section id="button">
+                    <h2>Button Component</h2>
+                    <p>Buttons allow users to take actions and make choices with a single tap.</p>
+                    
+                    <div class="component-example">
+                        <h3>Examples</h3>
+                        <div class="button-grid">
+                            <button class="btn btn-primary">Primary Button</button>
+                            <button class="btn btn-secondary">Secondary Button</button>
+                            <button class="btn btn-accent">Accent Button</button>
+                            <button class="btn btn-outline">Outline Button</button>
+                            <button class="btn" disabled>Disabled Button</button>
+                        </div>
+                    </div>
+                    
+                    <div class="component-docs">
+                        <h3>Usage</h3>
+                        <p>Use buttons to trigger actions or navigate to new pages. Choose the appropriate button style based on the importance of the action.</p>
+                        
+                        <button class="code-toggle" data-target="button-code">View Code</button>
+                        <pre class="code-block" id="button-code" style="display: none;">
+&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;
+&lt;button class="btn btn-accent"&gt;Accent Button&lt;/button&gt;
+&lt;button class="btn btn-outline"&gt;Outline Button&lt;/button&gt;
+&lt;button class="btn" disabled&gt;Disabled Button&lt;/button&gt;
+                        </pre>
+                    </div>
+                </section>
+                
+                <section id="card">
+                    <h2>Card Component</h2>
+                    <p>Cards are used to group related content and actions.</p>
+                    
+                    <div class="component-example">
+                        <h3>Examples</h3>
+                        <div class="card-grid">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Basic Card</h3>
+                                    <p>This is a basic card with a title and content.</p>
+                                    <div class="card-actions">
+                                        <button class="btn btn-primary">Action</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="https://via.placeholder.com/300x150" alt="Card image">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Card with Image</h3>
+                                    <p>This card includes an image at the top.</p>
+                                    <div class="card-actions">
+                                        <button class="btn btn-primary">Primary</button>
+                                        <button class="btn btn-outline">Secondary</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="component-docs">
+                        <h3>Usage</h3>
+                        <p>Cards are flexible containers that can hold various types of content and actions.</p>
+                        
+                        <button class="code-toggle" data-target="card-code">View Code</button>
+                        <pre class="code-block" id="card-code" style="display: none;">
+&lt;div class="card"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Card Title&lt;/h3&gt;
+    &lt;p&gt;Card content goes here.&lt;/p&gt;
+    &lt;div class="card-actions"&gt;
+      &lt;button class="btn btn-primary"&gt;Action&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-                    </pre>
-                </div>
-            </section>
-            
-            <section id="badge">
-                <h2>Badge Component</h2>
-                <p>Badges are used to highlight status, counts, or labels.</p>
-                <div class="component-example">
-                    <h3>Example</h3>
-                    <span class="badge badge-primary">New</span>
-                    <span class="badge badge-secondary">Updated</span>
-                    <span class="badge badge-success">Approved</span>
-                    <span class="badge badge-danger">Rejected</span>
-                    <div style="margin-top: 20px;">
-                        <button class="btn btn-primary">
-                            Notifications <span class="badge badge-light">4</span>
-                        </button>
+                        </pre>
                     </div>
-                </div>
-                <div class="component-docs">
-                    <h3>Documentation</h3>
-                    <p>Badges can be used to display counts, status indicators, or other small pieces of information.</p>
-                    <button class="code-toggle" onclick="toggleCode('badge-code')">View Code</button>
-                    <pre class="code-block" id="badge-code" style="display: none;">
+                </section>
+
+
+                <section id="input">
+                    <h2>Input Component</h2>
+                    <p>Input fields allow users to enter and edit text or make selections.</p>
+                    
+                    <div class="component-example">
+                        <h3>Examples</h3>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label for="text-input">Text Input</label>
+                                <input type="text" id="text-input" class="input" placeholder="Enter text...">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="password-input">Password Input</label>
+                                <input type="password" id="password-input" class="input" placeholder="Enter password...">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="disabled-input">Disabled Input</label>
+                                <input type="text" id="disabled-input" class="input" placeholder="Disabled" disabled>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="textarea-input">Textarea</label>
+                                <textarea id="textarea-input" class="textarea" placeholder="Enter multiple lines of text..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="component-docs">
+                        <h3>Usage</h3>
+                        <p>Use input fields to collect user data. Choose the appropriate input type based on the data you need to collect.</p>
+                        
+                        <button class="code-toggle" data-target="input-code">View Code</button>
+                        <pre class="code-block" id="input-code" style="display: none;">
+&lt;div class="input-group"&gt;
+  &lt;label for="text-input"&gt;Text Input&lt;/label&gt;
+  &lt;input type="text" id="text-input" class="input" placeholder="Enter text..."&gt;
+&lt;/div&gt;
+                        </pre>
+                    </div>
+                </section>
+                
+                <section id="alert">
+                    <h2>Alert Component</h2>
+                    <p>Alerts provide contextual feedback messages for user actions.</p>
+                    
+                    <div class="component-example">
+                        <h3>Examples</h3>
+                        <div class="alert alert-success">
+                            <strong>Success!</strong> Your operation was completed successfully.
+                        </div>
+                        <div class="alert alert-info">
+                            <strong>Info!</strong> This is an informational message.
+                        </div>
+                        <div class="alert alert-warning">
+                            <strong>Warning!</strong> This action might have consequences.
+                        </div>
+                        <div class="alert alert-danger">
+                            <strong>Danger!</strong> An error has occurred.
+                        </div>
+                    </div>
+                    
+                    <div class="component-docs">
+                        <h3>Usage</h3>
+                        <p>Use alerts to provide feedback to users about their actions or system status.</p>
+                        
+                        <button class="code-toggle" data-target="alert-code">View Code</button>
+                        <pre class="code-block" id="alert-code" style="display: none;">
+&lt;div class="alert alert-success"&gt;
+  &lt;strong&gt;Success!&lt;/strong&gt; Your operation was completed successfully.
+&lt;/div&gt;
+                        </pre>
+                    </div>
+                </section>
+                
+                <section id="badge">
+                    <h2>Badge Component</h2>
+                    <p>Badges are used to highlight status, counts, or labels.</p>
+                    
+                    <div class="component-example">
+                        <h3>Examples</h3>
+                        <div class="badge-grid">
+                            <span class="badge badge-primary">New</span>
+                            <span class="badge badge-secondary">Updated</span>
+                            <span class="badge badge-success">Approved</span>
+                            <span class="badge badge-danger">Rejected</span>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <button class="btn btn-primary">
+                                Notifications <span class="badge badge-light">4</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="component-docs">
+                        <h3>Usage</h3>
+                        <p>Use badges to display counts, status indicators, or other small pieces of information.</p>
+                        
+                        <button class="code-toggle" data-target="badge-code">View Code</button>
+                        <pre class="code-block" id="badge-code" style="display: none;">
 &lt;span class="badge badge-primary"&gt;New&lt;/span&gt;
 
 &lt;button class="btn btn-primary"&gt;
-    Notifications &lt;span class="badge badge-light"&gt;4&lt;/span&gt;
+  Notifications &lt;span class="badge badge-light"&gt;4&lt;/span&gt;
 &lt;/button&gt;
-                    </pre>
-                </div>
-            </section>
-        </main>
-    </div>
+                        </pre>
+                    </div>
+                </section>
+                
+                <section id="navigation">
+                    <h2>Navigation Component</h2>
+                    <p>The Navigation component provides a responsive navigation bar for your application.</p>
+                    
+                    <div class="component-example">
+                        <h3>Example</h3>
+                        <p>The navigation bar at the top of this page is an example of the Navigation component.</p>
+                        <p>Features include:</p>
+                        <ul>
+                            <li>Responsive design that adapts to different screen sizes</li>
+                            <li>Mobile menu for small screens</li>
+                            <li>Dropdown menus for organizing navigation items</li>
+                            <li>Theme toggle button for switching between light and dark modes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-docs">
+                        <h3>Usage</h3>
+                        <p>To use the Navigation component in your project:</p>
+                        
+                        <button class="code-toggle" data-target="navigation-code">View Code</button>
+                        <pre class="code-block" id="navigation-code" style="display: none;">
+&lt;!-- Include the navigation CSS --&gt;
+&lt;link rel="stylesheet" href="components/navigation/navigation.css"&gt;
 
-    <footer class="main-footer">
-        <p>&copy; 2025 Your Name/Company</p>
-    </footer>
+&lt;!-- Include the navigation component --&gt;
+&lt;div id="navigation-container"&gt;&lt;/div&gt;
 
-    <!-- JavaScript for Code Viewer -->
-    <script>
-        function toggleCode(codeBlockId) {
-            const codeBlock = document.getElementById(codeBlockId);
-            if (codeBlock.style.display === 'none') {
-                codeBlock.style.display = 'block';
-            } else {
-                codeBlock.style.display = 'none';
-            }
-        }
-
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeStylesheet = document.getElementById('theme-stylesheet');
-
+&lt;!-- Load the navigation --&gt;
+&lt;script&gt;
+  fetch('components/navigation/navigation.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('navigation-container').innerHTML = html;
+      
+      // Initialize theme toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeStylesheet = document.getElementById('theme-stylesheet');
+      
+      if (themeToggle && themeStylesheet) {
         themeToggle.addEventListener('click', () => {
-            if (themeStylesheet.getAttribute('href') === 'styles/light-theme.css') {
-                themeStylesheet.setAttribute('href', 'styles/dark-theme.css');
-                themeToggle.textContent = 'Switch to Light Theme';
-            } else {
-                themeStylesheet.setAttribute('href', 'styles/light-theme.css');
-                themeToggle.textContent = 'Switch to Dark Theme';
-            }
+          if (themeStylesheet.getAttribute('href') === 'styles/light-theme.css') {
+            themeStylesheet.setAttribute('href', 'styles/dark-theme.css');
+            document.querySelector('.sun-icon').style.display = 'block';
+            document.querySelector('.moon-icon').style.display = 'none';
+          } else {
+            themeStylesheet.setAttribute('href', 'styles/light-theme.css');
+            document.querySelector('.sun-icon').style.display = 'none';
+            document.querySelector('.moon-icon').style.display = 'block';
+          }
         });
-    </script>
+      }
+    });
+&lt;/script&gt;
+                        </pre>
+                    </div>
+                </section>
+            </main>
+            
+            <!-- Right Sidebar -->
+            <aside class="right-sidebar">
+                <div class="sticky top-4">
+                    <h3>Theme</h3>
+                    <p>Toggle between light and dark mode using the theme toggle in the navigation bar.</p>
+                    
+                    <div class="divider"></div>
+                    
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#installation">Installation Guide</a></li>
+                        <li><a href="#customization">Customization</a></li>
+                        <li><a href="https://github.com/yourusername/design-system" target="_blank">GitHub Repository</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        
+        <footer class="main-footer">
+            <p>&copy; 2025 Design System</p>
+        </footer>
+    </div>
 </body>
 </html>
