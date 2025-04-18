@@ -135,6 +135,11 @@
   height: 20px;
 }
 
+/* Add this rule to hide mobile menu by default */
+.mobile-menu {
+  display: none;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .navbar-center {
