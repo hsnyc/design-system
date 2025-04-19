@@ -27,7 +27,7 @@ The `variables.css` file contains the foundational design tokens:
 :root {
   /* Colors */
   --color-primary: #570DF8;
-  --color-primary-dark: #4406c5;
+  --color-primary-content: #4406c5;
   --color-secondary: #F000B8;
   --color-accent: #37CDBE;
   --color-neutral: #3D4451;

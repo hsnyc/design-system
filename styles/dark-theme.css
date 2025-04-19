@@ -1,5 +1,4 @@
 :root {
-    
     --bg-color: var(--color-base-300);
     --text-color: var(--color-base-content);
     --primary-color: var(--color-primary);
@@ -11,35 +10,27 @@
     --bg-code: var(--color-neutral);
     --text-code: var(--color-neutral-content);
 
-    --color-base-100: #3a3a40;
-    --color-base-200: #323238;
-    --color-base-300: #2b2b30;
-    --color-base-content: #dfe1e8;
-    --color-primary: #a4d4ae;
-    --color-primary-content: #1a2e1f;
-    --color-secondary: #e2bc8c;
-    --color-secondary-content: #2a1e14;
-    --color-accent: #e3a8c2;
-    --color-accent-content: #2a1626;
-    --color-neutral: #2c2c34;
-    --color-neutral-content: #dfe1e8;
-    --color-info: #a4ceda;
-    --color-info-content: #1a2d36;
-    --color-success: #a4d9c8;
-    --color-success-content: #1a312d;
-    --color-warning: #a4d4a8;
-    --color-warning-content: #1a2b14;
-    --color-error: #e0a4a4;
-    --color-error-content: #1a1212;
-
-    --radius-selector: 1rem;
-    --radius-field: 0.5rem;
-    --radius-box: 1rem;
-    --size-selector: 0.25rem;
-    --size-field: 0.25rem;
-    --border: 1px;
-    --depth: 0;
-    --noise: 0;
+    /* Dark Mode Colors */
+    --color-base-100: #2a303c;
+    --color-base-200: #242933;
+    --color-base-300: #20252e;
+    --color-base-content: #b2ccd6;
+    --color-primary: #9fe88d;
+    --color-primary-content: #091307;
+    --color-secondary: #ff7d5d;
+    --color-secondary-content: #160503;
+    --color-accent: #c792e9;
+    --color-accent-content: #0e0813;
+    --color-neutral: #1c212b;
+    --color-neutral-content: #b2ccd6;
+    --color-info: #28ebff;
+    --color-info-content: #011316;
+    --color-success: #62efbd;
+    --color-success-content: #03140d;
+    --color-warning: #efd057;
+    --color-warning-content: #141003;
+    --color-error: #ffae9b;
+    --color-error-content: #160b09;
 }
 
 body {

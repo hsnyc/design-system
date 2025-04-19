@@ -35,31 +35,37 @@
 /* Primary Button */
 .btn-primary {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-primary-content);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
+  /* Use color-mix to create a hover effect */
+  /* that darkens the primary color slightly */
+  background-color: color-mix(in srgb, var(--color-primary), #000 7%);
 }
 
 /* Secondary Button */
 .btn-secondary {
   background-color: var(--color-secondary);
-  color: white;
+  color: var(--color-secondary-content);
 }
 
 .btn-secondary:hover {
-  filter: brightness(0.9);
+    /* Use color-mix to create a hover effect */
+  /* that darkens the primary color slightly */
+  background-color: color-mix(in srgb, var(--color-secondary), #000 7%);
 }
 
 /* Accent Button */
 .btn-accent {
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-accent-content);
 }
 
 .btn-accent:hover {
-  filter: brightness(0.9);
+  /* Use color-mix to create a hover effect */
+  /* that darkens the primary color slightly */
+  background-color: color-mix(in srgb, var(--color-accent), #000 7%); 
 }
 
 /* Ghost Button */
@@ -80,7 +86,7 @@
 }
 
 .btn-outline:hover {
-  background-color: var(--color-base-200);
+  background-color: color-mix(in srgb, var(--color-base-200), #000 7%); 
 }
 
 /* Button Sizes */
