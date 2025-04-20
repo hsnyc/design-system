@@ -35,10 +35,36 @@
 
 /* Button Grid */
 .button-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: var(--spacing-4);
   margin-bottom: var(--spacing-6);
+}
+
+/* Add some breathing room between buttons in examples */
+.button-grid .btn {
+  margin: 0.5rem 0;
+}
+
+/* Make button groups look nicer in the examples */
+.btn-group {
+  margin: 1rem 0;
+}
+
+/* Add hover effect to the code toggle buttons */
+.code-toggle {
+  background-color: var(--color-base-200);
+  color: var(--color-base-content);
+  border: 1px solid var(--color-base-300);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.code-toggle:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
 }
 
 /* Card Grid */
