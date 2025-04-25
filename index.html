@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="layouts/main-layout.css">
     
     <!-- Component Styles -->
-    <link rel="stylesheet" href="components/navigation/navigation.css">
+    <link rel="stylesheet" href="components/navigation/nav-1/navigation.css">
     <link rel="stylesheet" href="components/button/button.css">
     <link rel="stylesheet" href="components/card/card.css">
     <link rel="stylesheet" href="components/input/input.css">
@@ -58,9 +58,9 @@
             </div>
             
             <div class="navbar-end">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
                     <!-- Sun icon (for dark mode) -->
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -73,7 +73,7 @@
                     </svg>
                     
                     <!-- Moon icon (for light mode) -->
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
