@@ -1,83 +1,102 @@
-<!-- Navigation Component -->
-<nav class="navbar">
-    <div class="navbar-start">
-        <button class="mobile-menu-button" aria-label="Open menu" id="mobile-menu-button">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-        </button>
-        <a href="/" class="navbar-brand">Design System</a>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Component</title>
+
+    <!-- Core Styles : customize or replace with your own styles -->
+    <link rel="stylesheet" href="../../../styles/variables.css">
+    <link rel="stylesheet" href="../../../styles/global.css">
     
-    <div class="navbar-center">
-        <ul class="navbar-menu">
-            <li><a href="#buttons">Buttons</a></li>
-            <li><a href="#cards">Cards</a></li>
-            <li><a href="#inputs">Form Inputs</a></li>
-            <li class="dropdown">
-                <a href="#layout">Layout</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="#grids">Grid System</a></li>
-                        <li><a href="#containers">Containers</a></li>
+    <!-- Theme : customize or replace with your own theme file -->
+    <link id="theme-stylesheet" rel="stylesheet" href="../../../styles/light-theme.css">
+    
+    <!-- =========================
+    Component Specific Files
+    ========================== -->
+    <!-- Navigation Styles -->
+    <link rel="stylesheet" href="navigation.css">
+    <!-- Navigation Script -->
+    <script src="navigation.js" defer></script>
+
+</head>
+<body>
+    <div class="main-wrapper">
+
+        <!-- Navigation Component -->
+        <div class="navbar-wrapper">
+            <nav class="navbar">
+                <div class="navbar-start">
+                    <button class="mobile-menu-button" 
+                            aria-label="Toggle navigation menu" 
+                            aria-controls="mobile-menu"
+                            aria-expanded="false"
+                            id="mobile-menu-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </button>
+                    <a href="#" class="navbar-brand">Design System</a>
+                </div>
+                
+                <div class="navbar-center">
+                    <ul class="navbar-menu">
+                        <li><a href="#buttons">Buttons</a></li>
+                        <li><a href="#cards">Cards</a></li>
+                        <li><a href="#inputs">Form Inputs</a></li>
+                        <li class="dropdown">
+                            <a href="#layout">Layout</a>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li><a href="#grids">Grid System</a></li>
+                                    <li><a href="#containers">Containers</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </li>
-        </ul>
-    </div>
-    
-    <div class="navbar-end">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-            <!-- Sun icon (for dark mode) -->
-            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            
-            <!-- Moon icon (for light mode) -->
-            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </button>
-    </div>
-</nav>
+                
+                <div class="navbar-end">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 A7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
 
-<!-- Mobile Menu (hidden by default) -->
-<div class="mobile-menu" id="mobile-menu">
-    <ul>
-        <li><a href="#buttons">Buttons</a></li>
-        <li><a href="#cards">Cards</a></li>
-        <li><a href="#inputs">Form Inputs</a></li>
-        <li><a href="#grids">Grid System</a></li>
-        <li><a href="#containers">Containers</a></li>
-    </ul>
-</div>
+        <!-- Mobile Menu -->
+        <div class="navbar-wrapper">
+            <div class="mobile-menu" 
+                 id="mobile-menu" 
+                 aria-hidden="true" 
+                 role="navigation"
+                 aria-label="Mobile navigation">
+                <ul>
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li><a href="#cards">Cards</a></li>
+                    <li><a href="#inputs">Form Inputs</a></li>
+                    <li><a href="#grids">Grid System</a></li>
+                    <li><a href="#containers">Containers</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div><!-- End of main-wrapper -->
+</body>
+</html>
 
-<!-- Navigation JavaScript -->
-<script>
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
-    }
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (event) => {
-        if (mobileMenu && mobileMenu.classList.contains('active') && 
-            !mobileMenu.contains(event.target) && 
-            !mobileMenuButton.contains(event.target)) {
-            mobileMenu.classList.remove('active');
-        }
-    });
-</script>
+

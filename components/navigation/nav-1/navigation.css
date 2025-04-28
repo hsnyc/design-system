@@ -1,12 +1,19 @@
 /* Navigation Styles */
+.navbar-wrapper {
+  width: 100%;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-4);
   background-color: var(--bg-color);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .navbar-start,
@@ -135,9 +142,29 @@
   height: 20px;
 }
 
-/* Add this rule to hide mobile menu by default */
+/* Mobile Menu */
 .mobile-menu {
-  display: none;
+  display: none; /* This will be overridden by .active class */
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mobile-menu.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive Styles */
@@ -147,22 +174,6 @@
   }
 
   .mobile-menu-button {
-    display: block;
-  }
-
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: var(--bg-color);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
-    z-index: 10;
-  }
-
-  .mobile-menu.active {
     display: block;
   }
 
